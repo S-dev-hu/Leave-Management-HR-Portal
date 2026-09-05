@@ -1,95 +1,83 @@
-🚀 Leave Management & HR Portal
+# 🚀 Leave Management & HR Portal
 
-A professional enterprise-style Leave Management & Human Resources Portal built with Python Flask, SQLite/PostgreSQL, Bootstrap, and Authentication & Role-Based Access Control.
-
-
+A professional **enterprise-style Leave Management & Human Resources Portal** built with **Python Flask**, **SQLite/PostgreSQL**, **Bootstrap**, and **Authentication & Role-Based Access Control**.
 
 This application enables organizations to streamline leave requests, approvals, employee management, and HR reporting through a modern web interface.
 
-📌 Overview
+---
+
+## 📌 Overview
 
 Managing employee leave manually using spreadsheets or emails can be inefficient and error-prone. This system centralizes leave management by providing a secure platform where employees can submit leave requests and managers can review, approve, or reject them.
 
-
-
 The application follows a role-based structure similar to real-world HR systems used in modern organizations.
 
-✨ Features
+---
 
-👤 Employee Features
+## ✨ Features
 
- Secure Login & Logout 
+### 👤 Employee Features
 
- Employee Dashboard 
+-  Secure Login & Logout 
+-  Employee Dashboard 
+-  Submit Leave Applications 
+-  View Leave Status 
+-  Leave Balance Tracking 
+-  View Leave History 
+-  Profile Management 
+-  Change Password 
 
- Submit Leave Applications 
+### 👨‍💼 Manager Features
 
- View Leave Status 
+-  Manager Dashboard 
+-  View Team Leave Requests 
+-  Approve Leave Requests 
+-  Reject Leave Requests 
+-  Add Comments to Requests 
+-  Employee Leave Monitoring 
 
- Leave Balance Tracking 
+### 🏢 HR Administrator Features
 
- View Leave History 
+-  Employee Management 
+-  User Account Management 
+-  Department Management 
+-  Leave Policy Configuration 
+-  Generate Reports 
+-  Leave Analytics 
+-  System Administration 
 
- Profile Management 
+---
 
- Change Password 
+## 📸 Screenshots
 
-👨‍💼 Manager Features
+### Login Page
 
- Manager Dashboard 
+ \<img width="900" alt="Login" src="docs/screenshots/login.png"> 
 
- View Team Leave Requests 
+### Employee Dashboard
 
- Approve Leave Requests 
+ \<img width="900" alt="Dashboard" src="docs/screenshots/dashboard.png"> 
 
- Reject Leave Requests 
+### Leave Request Form
 
- Add Comments to Requests 
+ \<img width="900" alt="Leave Request" src="docs/screenshots/leave-request.png"> 
 
- Employee Leave Monitoring 
+### Manager Approval Panel
 
-🏢 HR Administrator Features
+ \<img width="900" alt="Approval Panel" src="docs/screenshots/approval-panel.png"> 
 
- Employee Management 
+### Reports Dashboard
 
- User Account Management 
+ \<img width="900" alt="Reports" src="docs/screenshots/reports.png"> 
 
- Department Management 
+---
 
- Leave Policy Configuration 
+## 🏗️ System Architecture
 
- Generate Reports 
+```
+```
 
- Leave Analytics 
-
- System Administration 
-
-📸 Screenshots
-
-Login Page
-
- <img width="900" alt="Login" src="docs/screenshots/login.png"> 
-
-Employee Dashboard
-
- <img width="900" alt="Dashboard" src="docs/screenshots/dashboard.png"> 
-
-Leave Request Form
-
- <img width="900" alt="Leave Request" src="docs/screenshots/leave-request.png"> 
-
-Manager Approval Panel
-
- <img width="900" alt="Approval Panel" src="docs/screenshots/approval-panel.png"> 
-
-Reports Dashboard
-
- <img width="900" alt="Reports" src="docs/screenshots/reports.png"> 
-
-🏗️ System Architecture
-
-
-
+```
 +---------------------+
 |     Web Browser     |
 +----------+----------+
@@ -110,51 +98,47 @@ Module  Module     Module
 +---------------------+
 | SQLite/PostgreSQL   |
 +---------------------+
+```
 
-🛠️ Technology Stack
+---
 
-Backend
+## 🛠️ Technology Stack
 
- Python 3.11+ 
+### Backend
 
- Flask 
+-  Python 3.11+ 
+-  Flask 
+-  Flask-SQLAlchemy 
+-  Flask-Login 
+-  Flask-WTF 
 
- Flask-SQLAlchemy 
+### Frontend
 
- Flask-Login 
+-  HTML5 
+-  CSS3 
+-  Bootstrap 5 
+-  JavaScript 
 
- Flask-WTF 
+### Database
 
-Frontend
+-  SQLite (Development) 
+-  PostgreSQL (Production) 
 
- HTML5 
+### Authentication
 
- CSS3 
+-  Flask-Login 
+-  Password Hashing 
+-  Session Management 
+-  Role-Based Access Control (RBAC) 
 
- Bootstrap 5 
+---
 
- JavaScript 
+## 📂 Project Structure
 
-Database
+```
+```
 
- SQLite (Development) 
-
- PostgreSQL (Production) 
-
-Authentication
-
- Flask-Login 
-
- Password Hashing 
-
- Session Management 
-
- Role-Based Access Control (RBAC) 
-
-📂 Project Structure
-
-
-
+```
 Leave-Management-HR-Portal/
 │
 ├── app.py
@@ -201,315 +185,343 @@ Leave-Management-HR-Portal/
 └── docs/
     ├── screenshots/
     └── architecture/
+```
 
-⚙️ Setup & Installation
+---
 
-1️⃣ Clone the Repository
+# ⚙️ Setup & Installation
 
+## 1️⃣ Clone the Repository
 
+```
+```
 
+```
 git clone https://github.com/yourusername/Leave-Management-HR-Portal.git
 
 cd Leave-Management-HR-Portal
+```
 
-2️⃣ Create Virtual Environment
+---
 
-Windows
+## 2️⃣ Create Virtual Environment
 
+### Windows
 
+```
+```
 
+```
 python -m venv venv
 
 venv\Scripts\activate
+```
 
-Linux / macOS
+### Linux / macOS
 
+```
+```
 
-
+```
 python3 -m venv venv
 
 source venv/bin/activate
+```
 
-3️⃣ Install Dependencies
+---
 
+## 3️⃣ Install Dependencies
 
+```
+```
 
+```
 pip install -r requirements.txt
+```
 
-4️⃣ Create Environment Variables
+---
+
+## 4️⃣ Create Environment Variables
 
 Create a file called:
 
+```
+```
 
-
+```
 .env
+```
 
 Add:
 
+```
+```
 
-
+```
 SECRET_KEY=super-secret-key
 
 DATABASE_URL=sqlite:///leave_management.db
+```
 
 For PostgreSQL:
 
+```
+```
 
-
+```
 DATABASE_URL=postgresql://username:password@localhost/hr_portal
+```
 
-5️⃣ Initialize Database
+---
 
+## 5️⃣ Initialize Database
 
+```
+```
 
+```
 flask db init
 
 flask db migrate
 
 flask db upgrade
+```
 
 Or:
 
+```
+```
 
-
+```
 python create_db.py
+```
 
-6️⃣ Create Admin User
+---
 
+## 6️⃣ Create Admin User
 
+```
+```
 
+```
 python create_admin.py
+```
 
 Example:
 
+```
+```
 
-
+```
 Username: admin
 Email: admin@company.com
 Password: admin123
+```
 
-7️⃣ Run Application
+---
 
+## 7️⃣ Run Application
 
+```
+```
 
+```
 python app.py
+```
 
 or
 
+```
+```
 
-
+```
 flask run
+```
 
 Application URL:
 
+```
+```
 
-
+```
 http://127.0.0.1:5000
+```
 
-🔑 Demo Credentials
+---
 
-HR Admin
+# 🔑 Demo Credentials
 
+### HR Admin
 
+```
+```
 
+```
 Username: admin
 Password: admin123
+```
 
-Manager
+### Manager
 
+```
+```
 
-
+```
 Username: manager
 Password: manager123
+```
 
-Employee
+### Employee
 
+```
+```
 
-
+```
 Username: employee
 Password: employee123
+```
 
-📊 Database Design
+---
 
-Users Table
+# 📊 Database Design
 
-FieldType
+### Users Table
 
-id
+| FieldType      |         |
+| -------------- | ------- |
+| id             | Integer |
+| username       | String  |
+| email          | String  |
+| password\_hash | String  |
+| role           | String  |
 
-Integer
+### Employees Table
 
-username
+| FieldType      |         |
+| -------------- | ------- |
+| id             | Integer |
+| first\_name    | String  |
+| last\_name     | String  |
+| department     | String  |
+| leave\_balance | Integer |
 
-String
+### Leave Requests Table
 
-email
+| FieldType    |         |
+| ------------ | ------- |
+| id           | Integer |
+| employee\_id | Integer |
+| leave\_type  | String  |
+| start\_date  | Date    |
+| end\_date    | Date    |
+| status       | String  |
 
-String
+---
 
-password_hash
-
-String
-
-role
-
-String
-
-Employees Table
-
-FieldType
-
-id
-
-Integer
-
-first_name
-
-String
-
-last_name
-
-String
-
-department
-
-String
-
-leave_balance
-
-Integer
-
-Leave Requests Table
-
-FieldType
-
-id
-
-Integer
-
-employee_id
-
-Integer
-
-leave_type
-
-String
-
-start_date
-
-Date
-
-end_date
-
-Date
-
-status
-
-String
-
-📈 Reports
+# 📈 Reports
 
 The system can generate:
 
+-  Leave Usage Report 
+-  Department Leave Report 
+-  Employee Leave Summary 
+-  Pending Approvals Report 
+-  Monthly Leave Trends 
+-  Annual Leave Statistics 
 
+---
 
- Leave Usage Report 
+# 🔒 Security Features
 
- Department Leave Report 
+-  Password Hashing 
+-  Session Management 
+-  Role-Based Access Control 
+-  CSRF Protection 
+-  Secure Authentication 
+-  Input Validation 
+-  SQL Injection Protection 
 
- Employee Leave Summary 
+---
 
- Pending Approvals Report 
+# 🚀 Future Enhancements
 
- Monthly Leave Trends 
+-  Email Notifications 
+-  Multi-Level Approval Workflow 
+-  Calendar Integration 
+-  Payroll Integration 
+-  Mobile Application 
+-  Employee Self-Service Portal 
+-  Leave Forecast Analytics 
+-  PDF Report Generation 
+-  Microsoft Teams Integration 
 
- Annual Leave Statistics 
+---
 
-🔒 Security Features
-
- Password Hashing 
-
- Session Management 
-
- Role-Based Access Control 
-
- CSRF Protection 
-
- Secure Authentication 
-
- Input Validation 
-
- SQL Injection Protection 
-
-🚀 Future Enhancements
-
- Email Notifications 
-
- Multi-Level Approval Workflow 
-
- Calendar Integration 
-
- Payroll Integration 
-
- Mobile Application 
-
- Employee Self-Service Portal 
-
- Leave Forecast Analytics 
-
- PDF Report Generation 
-
- Microsoft Teams Integration 
-
-🧪 Testing
+# 🧪 Testing
 
 Run tests:
 
+```
+```
 
-
+```
 pytest
+```
 
 Run coverage:
 
+```
+```
 
-
+```
 pytest --cov=app
+```
 
-🤝 Contributing
+---
 
- Fork the repository 
+# 🤝 Contributing
 
- Create a feature branch 
+1.  Fork the repository 
+2.  Create a feature branch 
 
+```
+```
 
-
+```
 git checkout -b feature/new-feature
+```
 
- Commit changes 
+3.  Commit changes 
 
+```
+```
 
-
+```
 git commit -m "Add new feature"
+```
 
- Push branch 
+4.  Push branch 
 
+```
+```
 
-
+```
 git push origin feature/new-feature
+```
 
- Open Pull Request 
+5.  Open Pull Request 
 
-📄 License
+---
+
+# 📄 License
 
 This project is licensed under the MIT License.
 
-👨‍💻 Author
+---
 
-Sibusiso Maseko
+# 👨‍💻 Author
 
+**Sibusiso Maseko**
 
-
- GitHub: https://github.com/S-dev-hu 
-
- LinkedIn: https://linkedin.com/in/sibusiso-maseko-a5a21aab
- 
+-  GitHub: `https://github.com/S-dev-hu` 
+-  LinkedIn: `https://linkedin.com/in/sibusiso-maseko-a5a21aab`
